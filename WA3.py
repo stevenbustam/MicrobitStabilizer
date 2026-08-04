@@ -36,14 +36,12 @@ while True:
     z = accelerometer.get_z()
     print (x, y, z)
 
-    if not -250<=y<=250:
-        if y>=0:
-            balance_back()
-        else:
-            balance_front()
-    if not -300<=x<=300:
-        if x>=0:
-            balance_right()
-        else:
-            balance_left()
-            
+    if y>0:
+        balance_back()
+    elif y<0:
+        balance_front()
+    if x>0:
+        balance_right()
+    elif y<0:
+        balance_left()
+        
