@@ -42,6 +42,6 @@ while True:
         balance_front()
     if x>0:
         balance_right()
-    elif y<0:
+    elif x<0:
         balance_left()
         
