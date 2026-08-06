@@ -16,9 +16,8 @@ display.off()
 def coordinate_degree(n):
     #by mean, parameter = 1006.4
     return n/1000*90
-def balance1_y():
+def balance_y():
     pin1.write_analog(90+coordinate_degree(y))
-def balance2_y():
     pin2.write_analog(90-coordinate_degree(y))
     
 #=================
@@ -29,7 +28,6 @@ while True:
     z = accelerometer.get_z()
     print (x, y, z)
 
-    if (-90<=coordinate_degree(y)) and (90>=coordinate_degree(y)):
-        balance1_y()
-        balance2_y()
+    if (-80<=coordinate_degree(y)) and (80>=coordinate_degree(y)):
+        balance_y()
         
