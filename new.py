@@ -31,7 +31,6 @@ while True:
     y = accelerometer.get_y()
     z = accelerometer.get_z()
     print (x, y, z)
-    sleep(1000)
         
     if (-22.5<=coordinate_degree(y)) and (22.5>=coordinate_degree(y)):
         balance_y()
