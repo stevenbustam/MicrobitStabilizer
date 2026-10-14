@@ -15,15 +15,13 @@ display.off()
 #=======def=======
 def coordinate_degree(n):
     #by mean, parameter = 1006.4
-    return n/1000*90
+    return n/1000*(90/2) # /2 to make it less vigorous
 def balance_y():
     pin1.write_analog(90+coordinate_degree(y))
     pin2.write_analog(90-coordinate_degree(y))
 def balance_x():
     pin10.write_analog(90+coordinate_degree(x))
     pin13.write_analog(90-coordinate_degree(x))
-def acc(lst):
-    return (lst[2]-lst[1])/(lst[1]-lst[0])
 #================= 
 
 while True:
