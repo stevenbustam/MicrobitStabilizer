@@ -15,7 +15,7 @@ display.off()
 #=======def=======
 def coordinate_degree(n):
     #by mean, parameter = 1006.4
-    return n/1000*(90/2) # /2 to make it less vigorous
+    return n/1000*(90/4) # /4 to make it less vigorous due to hardware limitations
 def balance_y():
     pin1.write_analog(90+coordinate_degree(y))
     pin2.write_analog(90-coordinate_degree(y))
